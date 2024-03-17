@@ -1,0 +1,111 @@
+:root {
+  --main-clr: hsl(47, 88%, 63%);
+  --neutral-clr: hsl(0, 0%, 100%);
+  --h-clr: hsl(0, 0%, 7%);
+  --p-clr: hsl(0, 0%, 50%);
+
+  --fs-xs: 12px;
+  --fs-s: 14px;
+  --fs-m: 20px;
+
+  --fw-semi-bold: 500;
+  --fw-bold: 800;
+
+  --space: var(--fs-xs);
+  font-family: "fig-tree-bold";
+}
+
+@font-face {
+  font-family: fig-tree-bold;
+  src: url(assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+@font-face {
+  font-family: fig-tree-semi-bold;
+  src: url(assets/fonts/static/Figtree-SemiBold.ttf);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--main-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--neutral-clr);
+  width: 327px;
+  height: 500px;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 8px 8px #000;
+  transition: box-shadow 0.5s;
+}
+.container:hover {
+  box-shadow: 16px 16px #000;
+}
+
+.picture img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.txt-content > *:not(:first-child) {
+  margin-top: var(--space);
+}
+.txt-content p:nth-child(1) {
+  display: inline-block;
+  background-color: var(--main-clr);
+  padding: 5px;
+  border-radius: 4px;
+}
+.txt-content p:nth-child(2) {
+  font-size: var(--fs-s);
+  font-family: "fig-tree-semi-bold";
+}
+.txt-content h1 {
+  font-size: var(--fs-m);
+  font-weight: var(--fw-bold);
+  transition: color 0.5s;
+}
+.txt-content h1:hover {
+  color: var(--main-clr);
+}
+.txt-content h5 {
+  color: var(--p-clr);
+  font-family: "fig-tree-semi-bold";
+  font-size: var(--fs-s);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile img {
+  width: 32px;
+}
+.profile p {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-bold);
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --fs-xs: 14px;
+    --fs-s: 16px;
+    --fs-m: 22px;
+  }
+  .container {
+    width: 384px;
+  }
+
+  .txt-content h5 {
+    font-size: 16px;
+  }
+}
