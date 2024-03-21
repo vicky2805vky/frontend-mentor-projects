@@ -1,3 +1,7 @@
+@font-face {
+  font-family: inter;
+  src: url(assets/fonts/static/Inter-Regular.ttf);
+}
 :root {
   --main-clr: hsl(75, 94%, 57%);
   --txt-clr: hsl(0, 0%, 100%);
@@ -11,6 +15,8 @@
   --fw-normal: 400;
   --fw-semi-bold: 600;
   --fw-bold: 700;
+
+  font-family: inter;
 }
 
 body {
@@ -32,14 +38,56 @@ body {
 .profile {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .profile img {
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
 }
 .profile h3 {
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.profile h4 {
+  color: var(--main-clr);
+  font-weight: var(--fw-semi-bold);
+  font-size: 12px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+}
+.social-media p {
+  margin-block: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+.social-media ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-media li {
+  width: 100%;
+  height: 40px;
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--neutral-clr2);
+  border-radius: 8px;
+  transition: background-color 0.5s;
+}
+.social-media li:hover {
+  background-color: var(--main-clr);
+  color: black;
+}
+.social-media a {
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
