@@ -1,0 +1,45 @@
+:root {
+  --main-clr: hsl(75, 94%, 57%);
+  --txt-clr: hsl(0, 0%, 100%);
+  --bg-clr: hsl(0, 0%, 8%);
+
+  --neutral-clr1: hsl(0, 0%, 12%);
+  --neutral-clr2: hsl(0, 0%, 20%);
+
+  font-size: 14px;
+
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--bg-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container {
+  width: 300px;
+  height: 500px;
+  background: var(--neutral-clr1);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--txt-clr);
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.profile h3 {
+  font-weight: var(--fw-bold);
+}
