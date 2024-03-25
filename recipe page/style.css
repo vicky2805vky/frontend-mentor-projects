@@ -1,0 +1,192 @@
+:root {
+  --primary-clr: hsl(14, 45%, 36%);
+  --secondary-clr: hsl(332, 51%, 32%);
+
+  --neutral-clr-1: hsl(0, 0%, 100%);
+  --neutral-clr-2: hsl(330, 100%, 98%);
+  --neutral-clr-3: hsl(30, 54%, 90%);
+  --neutral-clr-4: hsl(30, 18%, 87%);
+  --neutral-clr-5: hsl(30, 10%, 34%);
+  --neutral-clr-6: hsl(24, 5%, 18%);
+
+  --fz-h: 2rem;
+  --fz-sh: 1.5rem;
+
+  --fw-normal: 400;
+  --fw-semi-bold: 700;
+
+  font-family: outfit;
+  color: var(--neutral-clr-5);
+}
+
+@font-face {
+  font-family: young-serif;
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: outfit;
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+/* Default Styling */
+
+.prep-time b,
+.Instructions b {
+  color: var(--neutral-clr-5);
+  font-weight: var(--fw-semi-bold);
+}
+
+.nutrition i {
+  color: var(--primary-clr);
+  font-weight: var(--fw-semi-bold);
+}
+
+li::marker {
+  color: var(--primary-clr);
+  font-weight: var(--fw-semi-bold);
+}
+
+/* Styling */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-clr-3);
+}
+
+.container {
+  background: url(assets/images/image-omelette.jpeg) no-repeat top;
+  background-size: contain;
+  max-width: 520px;
+  background-color: var(--neutral-clr-1);
+  padding: 2rem;
+  font-size: 0.99rem;
+}
+
+.container img {
+  border-radius: 0.5rem;
+  opacity: 0;
+}
+
+.introduction h1 {
+  margin-block: 2rem;
+}
+.introduction p {
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.prep-time {
+  background: var(--neutral-clr-2);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.prep-time h6 {
+  font-size: 1rem;
+}
+.prep-time ul li,
+.ingredients ul li,
+.Instructions ul li {
+  padding: 1em 1rem 0;
+  margin-left: 1rem;
+  line-height: 1.5;
+}
+
+.ingredients,
+.Instructions,
+.nutrition {
+  margin-block: 1.5rem;
+}
+
+.nutrition h4 {
+  margin-block: 1rem;
+}
+.nutrition p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+.nutrition ul li {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 0.5rem);
+  border-bottom: 1px solid var(--neutral-clr-4);
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --fz-h: 1.5rem;
+    --fz-sh: 1.2rem;
+  }
+
+  .container {
+    background: none;
+    margin-block: 5%;
+    font-size: 0.7rem;
+    background-color: var(--neutral-clr-1);
+    border-radius: 1rem;
+  }
+
+  .container img {
+    opacity: 1;
+  }
+
+  .nutrition ul li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0.3rem);
+    border-bottom: 1px solid var(--neutral-clr-4);
+    align-items: center;
+    padding-left: 2rem;
+  }
+}
+
+/* Utility Classes */
+
+.font-family {
+  font-family: young-serif;
+}
+
+.font-size-h {
+  font-size: var(--fz-h);
+}
+.font-size-sh {
+  font-size: var(--fz-sh);
+}
+
+.title-clr {
+  color: var(--neutral-clr-6);
+}
+.heading-clr {
+  color: var(--primary-clr);
+}
+.sub-heading-clr {
+  color: var(--secondary-clr);
+}
+.p-clr {
+  color: var(--neutral-clr-5);
+}
+.hr-clr {
+  border: 0;
+  border-top: 1px solid var(--neutral-clr-4);
+}
+.b-clr {
+  color: var(--neutral-clr-5);
+}
+
+.fw-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.space {
+  margin-top: var(--space);
+}
+
+.ul li {
+  list-style: disc;
+}
+.ol li {
+  list-style: decimal;
+}
